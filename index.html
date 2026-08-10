@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dhruv Kamdar - Data &amp; Finance Analytics</title>
+  <meta name="description" content="Dhruv Kamdar - MSc Finance Analytics (King's College London). Data quality, governance, reconciliation and analytics in SQL, Python &amp; R." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230f766e'/%3E%3Ctext x='50' y='68' font-size='52' font-family='Arial' font-weight='bold' fill='white' text-anchor='middle'%3EDK%3C/text%3E%3C/svg%3E" />
+</head>
+<body>
+  <!-- Progress bar -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- Navigation -->
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#home" class="brand">DK<span>.</span></a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <a href="assets/Dhruv_Kamdar_CV.pdf" class="btn btn-ghost" download>Resume</a>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <svg class="sun" viewBox="0 0 24 24" width="18" height="18"><circle cx="12" cy="12" r="5" fill="currentColor"/><g stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.2" y1="4.2" x2="5.6" y2="5.6"/><line x1="18.4" y1="18.4" x2="19.8" y2="19.8"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.2" y1="19.8" x2="5.6" y2="18.4"/><line x1="18.4" y1="5.6" x2="19.8" y2="4.2"/></g></svg>
+          <svg class="moon" viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        </button>
+        <button class="menu-btn" id="menuBtn" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="hero-bg"></div>
+    <div class="container hero-inner">
+      <div class="hero-text reveal">
+        <p class="eyebrow">London, UK · Available for opportunities</p>
+        <h1>Turning messy data into a <span class="grad">single source of truth.</span></h1>
+        <p class="lead">
+          I'm <strong>Dhruv Kamdar</strong>, an MSc Finance Analytics graduate from King's College London
+          who builds clean, reconciled, governed data. SQL, Python &amp; R, with a sharp eye for quality.
+        </p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary">View my work</a>
+          <a href="assets/Dhruv_Kamdar_CV.pdf" class="btn btn-outline" download>Download resume</a>
+        </div>
+        <div class="hero-socials">
+          <a href="mailto:kamdardhruv8@gmail.com" aria-label="Email">✉ kamdardhruv8@gmail.com</a>
+          <span>·</span>
+          <a href="tel:+447423238207" aria-label="Phone">+44 7423 238207</a>
+        </div>
+      </div>
+      <div class="hero-card reveal">
+        <div class="avatar">DK</div>
+        <div class="hero-card-body">
+          <h3>Dhruv Kamdar</h3>
+          <p class="role">Data &amp; Finance Analytics</p>
+          <ul class="hero-facts">
+            <li><span>🎓</span> MSc Finance Analytics - KCL</li>
+            <li><span>🧮</span> SQL · Python · R · Advanced Excel</li>
+            <li><span>🛡️</span> Data Quality &amp; Governance</li>
+            <li><span>🤖</span> Agentic AI &amp; Automation</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="stats">
+    <div class="container stats-grid">
+      <div class="stat reveal"><div class="stat-num" data-target="264000" data-suffix="+">0</div><p>Records analysed in R &amp; Python</p></div>
+      <div class="stat reveal"><div class="stat-num" data-prefix="$" data-target="77" data-suffix="B+">0</div><p>Of financial data reviewed</p></div>
+      <div class="stat reveal"><div class="stat-num" data-target="30" data-suffix="%">0</div><p>Reduction in data duplication</p></div>
+      <div class="stat reveal"><div class="stat-num" data-target="25" data-suffix="%">0</div><p>Improvement in retrieval efficiency</p></div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="tag">01 - About</span>
+        <h2>Detail-obsessed about data quality.</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p>
+            I graduated with an <strong>MSc in Finance Analytics from King's College London</strong>, building on a
+            Bachelor of Commerce (8.7/10) from Jai Hind College, Mumbai. My focus is establishing clean, consistent
+            <strong>golden sources of data</strong> through validation, reconciliation and duplicate resolution, and
+            making that data clear for non-technical stakeholders.
+          </p>
+          <p>
+            I'm proficient in <strong>SQL and Python</strong>, with a strong foundation in database design, data validation
+            and reporting. I'm organised, collaborative, and genuinely enjoy resolving data issues and educating teams on
+            best practice. Lately I've been exploring <strong>agentic AI and workflow automation</strong> to support
+            future data governance and analytics initiatives.
+          </p>
+          <div class="about-edu">
+            <div class="edu-item">
+              <h4>King's College London</h4>
+              <p>MSc Finance Analytics</p>
+              <span>Sep 2025 - Sep 2026 · London, UK</span>
+            </div>
+            <div class="edu-item">
+              <h4>Jai Hind College, Mumbai</h4>
+              <p>B.Com - 8.7/10</p>
+              <span>Mar 2022 - Mar 2025 · India</span>
+            </div>
+          </div>
+        </div>
+        <aside class="about-side reveal">
+          <h4>Currently</h4>
+          <ul>
+            <li>Building agentic AI data pipelines</li>
+            <li>DeepLearning.AI Agentic AI Certificate</li>
+            <li>Open to Data / Analyst roles</li>
+          </ul>
+          <a href="#contact" class="btn btn-primary btn-block">Let's talk</a>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section class="section alt" id="skills">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="tag">02 - Skills</span>
+        <h2>What I bring to the table.</h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-card reveal">
+          <div class="skill-ico">🗂️</div>
+          <h3>Data Management</h3>
+          <p>Master data maintenance, data quality &amp; consistency, reconciliation, duplicate resolution, golden-source establishment, documentation &amp; change history.</p>
+        </div>
+        <div class="skill-card reveal">
+          <div class="skill-ico">⚙️</div>
+          <h3>Technical</h3>
+          <p>SQL (query, extract, validate, reconcile), Python, R, advanced Excel, database design &amp; ER modelling, dashboards &amp; reporting, data preparation.</p>
+        </div>
+        <div class="skill-card reveal">
+          <div class="skill-ico">🛡️</div>
+          <h3>Governance &amp; Process</h3>
+          <p>Data governance awareness, process improvement, repeatable data procedures, compliance &amp; regulatory awareness, auditing fundamentals.</p>
+        </div>
+        <div class="skill-card reveal">
+          <div class="skill-ico">🤝</div>
+          <h3>Professional</h3>
+          <p>Stakeholder management, educating non-technical colleagues, attention to detail, organisation &amp; time management, cross-team collaboration.</p>
+        </div>
+      </div>
+
+      <div class="bars reveal">
+        <div class="bar"><div class="bar-top"><span>SQL</span><span>90%</span></div><div class="bar-track"><i style="--w:90%"></i></div></div>
+        <div class="bar"><div class="bar-top"><span>Python</span><span>82%</span></div><div class="bar-track"><i style="--w:82%"></i></div></div>
+        <div class="bar"><div class="bar-top"><span>R</span><span>75%</span></div><div class="bar-track"><i style="--w:75%"></i></div></div>
+        <div class="bar"><div class="bar-top"><span>Excel (Advanced)</span><span>88%</span></div><div class="bar-track"><i style="--w:88%"></i></div></div>
+        <div class="bar"><div class="bar-top"><span>Data Governance</span><span>80%</span></div><div class="bar-track"><i style="--w:80%"></i></div></div>
+        <div class="bar"><div class="bar-top"><span>Dashboards &amp; Reporting</span><span>85%</span></div><div class="bar-track"><i style="--w:85%"></i></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section class="section" id="experience">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="tag">03 - Experience</span>
+        <h2>Where I've made an impact.</h2>
+      </div>
+      <div class="timeline">
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div class="tl-body">
+            <div class="tl-head"><h3>Intern, Data &amp; Systems</h3><span class="tl-date">Mar 2025 - Aug 2025</span></div>
+            <p class="tl-org">DG Software · Andheri, Mumbai</p>
+            <ul>
+              <li>Established a golden source of master data by restructuring 12 database tables, cutting duplication by 30%.</li>
+              <li>Wrote SQL to query, validate and reconcile 10,000+ records, resolving discrepancies and duplicates.</li>
+              <li>Built reporting dashboards making data clear for non-technical stakeholders; improved retrieval efficiency 25%.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div class="tl-body">
+            <div class="tl-head"><h3>Student Consultant - Research Lead</h3><span class="tl-date">Jun 2026 - Jul 2026</span></div>
+            <p class="tl-org">Practera Finance Micro Internship · London, UK</p>
+            <ul>
+              <li>Central point of contact for data requests, gathering, validating and reconciling across multiple sources.</li>
+              <li>Analysed ₹6.45 lakh crore ($77B+) of data, identifying trends and emerging quality issues.</li>
+              <li>Produced clear reports and presented findings to the client's Managing Director.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div class="tl-body">
+            <div class="tl-head"><h3>Data Analytics Job Simulation</h3><span class="tl-date">Aug 2026</span></div>
+            <p class="tl-org">Quantium (Forage)</p>
+            <ul>
+              <li>Analysed 264,000+ records in R &amp; Python, covering preparation, cleaning and quality checks.</li>
+              <li>Ran customer segmentation and experimentation analysis; resolved data discrepancies methodically.</li>
+              <li>Produced data-quality reporting and communicated findings to a non-technical stakeholder.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section class="section alt" id="projects">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="tag">04 - Projects</span>
+        <h2>Selected projects &amp; achievements.</h2>
+        <p class="section-sub">Data, finance and automation work. Links open source or write-ups where available.</p>
+      </div>
+      <div class="projects" id="projectGrid">
+        <!-- Cards injected from script.js (projects array) -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section" id="contact">
+    <div class="container contact-inner">
+      <div class="section-head reveal center">
+        <span class="tag">05 - Contact</span>
+        <h2>Let's build something clean.</h2>
+        <p class="section-sub">Open to Data Analyst, Data Quality and Analytics roles. The fastest way to reach me is email.</p>
+      </div>
+      <div class="contact-grid reveal">
+        <button type="button" class="contact-card" data-modal="open">
+          <div class="cc-ico">✉</div><h4>Email</h4><p>kamdardhruv8@gmail.com</p>
+        </button>
+        <button type="button" class="contact-card" data-modal="open">
+          <div class="cc-ico">📞</div><h4>Phone</h4><p>+44 7423 238207</p>
+        </button>
+        <a class="contact-card" href="assets/Dhruv_Kamdar_CV.pdf" download>
+          <div class="cc-ico">📄</div><h4>Resume</h4><p>Download PDF</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact popup -->
+  <div class="modal" id="contactModal" aria-hidden="true">
+    <div class="modal-backdrop" data-modal="close"></div>
+    <div class="modal-card" role="dialog" aria-modal="true" aria-label="Contact Dhruv Kamdar">
+      <button class="modal-close" data-modal="close" aria-label="Close">&times;</button>
+      <div class="avatar modal-avatar">DK</div>
+      <h3>Get in touch</h3>
+      <p class="modal-sub">Pick the option that suits you best.</p>
+      <div class="modal-actions">
+        <a class="btn btn-primary btn-block" href="https://mail.google.com/mail/?view=cm&fs=1&to=kamdardhruv8@gmail.com&su=Portfolio%20enquiry" target="_blank" rel="noopener">✉ Send email</a>
+        <a class="btn btn-outline btn-block" id="callBtn" href="tel:+447423238207">📞 Call</a>
+        <a class="btn btn-outline btn-block" href="https://wa.me/447423238207" target="_blank" rel="noopener">💬 Message on WhatsApp</a>
+      </div>
+      <p class="modal-toast" id="modalToast" hidden></p>
+      <div class="modal-details">
+        <span>kamdardhruv8@gmail.com</span>
+        <span>+44 7423 238207</span>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span class="brand">DK<span>.</span></span>
+      <p>© <span id="year"></span> Dhruv Kamdar · Built with care in London.</p>
+      <a href="#home" class="to-top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
