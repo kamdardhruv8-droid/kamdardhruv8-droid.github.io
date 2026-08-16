@@ -15,7 +15,8 @@ const projects = [
     ],
     stack: ["R", "Python", "Segmentation", "A/B Testing", "Data Cleaning"],
     link: "https://www.theforage.com/simulations/quantium/data-analytics-rqkb",
-    repo: ""
+    repo: "https://github.com/kamdardhruv8-droid/quantium-virtual-internship",
+    pdf: "assets/projects/Quantium_Project_Dhruv_Kamdar.pdf"
   },
   {
     tag: "Investment Banking · Operations",
@@ -109,11 +110,15 @@ function renderProjects() {
         .join("");
       const stack = (p.stack || []).map((s) => `<span>${s}</span>`).join("");
       const links = [
+        p.pdf ? `<a href="${p.pdf}" class="pc-casestudy" data-pdf="${p.pdf}" data-pdf-title="${p.title}">📊 View full case study →</a>` : "",
         p.link ? `<a href="${p.link}" target="_blank" rel="noopener">View project ↗</a>` : "",
         p.repo ? `<a href="${p.repo}" target="_blank" rel="noopener">Source ↗</a>` : ""
       ].join("");
+      const clickable = p.pdf ? ` has-pdf" data-pdf="${p.pdf}" data-pdf-title="${p.title}` : "";
+      const badge = p.pdf ? `<span class="pc-badge">Case study</span>` : "";
       return `
-      <article class="project-card reveal">
+      <article class="project-card reveal${clickable}" ${p.pdf ? 'role="button" tabindex="0"' : ""}>
+        ${badge}
         <span class="pc-num">${num}</span>
         <span class="pc-tag">${p.tag}</span>
         <h3>${p.title}</h3>
@@ -265,6 +270,58 @@ function initModal() {
   });
 }
 
+/* ---- Project case-study popup (embedded PDF) ---- */
+function initProjectModal() {
+  const modal = document.getElementById("pdfModal");
+  if (!modal) return;
+  const frame = document.getElementById("pdfFrame");
+  const title = document.getElementById("pdfTitle");
+  const openTab = document.getElementById("pdfOpen");
+  const download = document.getElementById("pdfDownload");
+
+  const openPdf = (src, name) => {
+    title.textContent = name ? name + " — case study" : "Case study";
+    openTab.href = src;
+    download.href = src;
+    frame.src = src + "#view=FitH";
+    modal.classList.add("open");
+    modal.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+  };
+  const closePdf = () => {
+    modal.classList.remove("open");
+    modal.setAttribute("aria-hidden", "true");
+    frame.src = "about:blank"; // stop rendering / free memory
+    document.body.style.overflow = "";
+  };
+
+  // Delegate clicks on any project card / link that carries a data-pdf.
+  document.getElementById("projectGrid").addEventListener("click", (e) => {
+    const trigger = e.target.closest("[data-pdf]");
+    if (!trigger) return;
+    // Let genuine external links (Forage, GitHub) behave normally.
+    const extLink = e.target.closest('a[target="_blank"]');
+    if (extLink) return;
+    e.preventDefault();
+    openPdf(trigger.getAttribute("data-pdf"), trigger.getAttribute("data-pdf-title"));
+  });
+  // Keyboard: Enter/Space on a focused card opens it.
+  document.getElementById("projectGrid").addEventListener("keydown", (e) => {
+    if (e.key !== "Enter" && e.key !== " ") return;
+    const card = e.target.closest(".has-pdf");
+    if (!card) return;
+    e.preventDefault();
+    openPdf(card.getAttribute("data-pdf"), card.getAttribute("data-pdf-title"));
+  });
+
+  modal.querySelectorAll("[data-pdf-close]").forEach((el) =>
+    el.addEventListener("click", closePdf)
+  );
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && modal.classList.contains("open")) closePdf();
+  });
+}
+
 /* ---- Init ---- */
 document.addEventListener("DOMContentLoaded", () => {
   renderProjects();
@@ -272,5 +329,6 @@ document.addEventListener("DOMContentLoaded", () => {
   initScroll();
   initMenu();
   initModal();
+  initProjectModal();
   document.getElementById("year").textContent = new Date().getFullYear();
 });

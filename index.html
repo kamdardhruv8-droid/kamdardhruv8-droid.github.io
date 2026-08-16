@@ -292,6 +292,24 @@
     </div>
   </div>
 
+  <!-- Project case-study popup -->
+  <div class="pdf-modal" id="pdfModal" aria-hidden="true">
+    <div class="modal-backdrop" data-pdf-close></div>
+    <div class="pdf-card" role="dialog" aria-modal="true" aria-label="Project case study">
+      <div class="pdf-head">
+        <h3 id="pdfTitle">Case study</h3>
+        <div class="pdf-actions">
+          <a id="pdfOpen" class="btn btn-ghost" href="#" target="_blank" rel="noopener">Open in new tab ↗</a>
+          <a id="pdfDownload" class="btn btn-ghost" href="#" download>Download</a>
+          <button class="pdf-close" data-pdf-close aria-label="Close">&times;</button>
+        </div>
+      </div>
+      <div class="pdf-frame-wrap">
+        <iframe id="pdfFrame" title="Project case study" src="about:blank"></iframe>
+      </div>
+    </div>
+  </div>
+
   <footer class="footer">
     <div class="container footer-inner">
       <span class="brand">DK<span>.</span></span>
