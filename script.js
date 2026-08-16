@@ -59,16 +59,17 @@ const projects = [
   },
   {
     tag: "Portfolio · Finance",
-    title: "King's Investment Fund",
+    title: "CashCraft Portfolio · King's Investment Fund",
     description:
-      "Team Leader maintaining consistent data quality across portfolio reporting, reconciling performance data from multiple sources and currencies, and quality-checking every deliverable for accuracy and completeness.",
+      "Constructed and tracked a defensive, diversified £40,000 UK & European equity portfolio (8 holdings, 5 sectors, 2 currencies) over a 63-day risk-off window. Built the daily FX-adjusted tracking framework and full risk-adjusted attribution: Sharpe, beta, Jensen's Alpha, VaR and Brinson performance attribution.",
     metrics: [
-      { value: "Multi-ccy", label: "reconciliation" },
-      { value: "Team Lead", label: "role" }
+      { value: "+3.75%", label: "vs FTSE 100" },
+      { value: "+16.93%", label: "Jensen's Alpha (ann.)" }
     ],
-    stack: ["Portfolio Reporting", "Data Quality", "Excel", "Leadership"],
+    stack: ["Portfolio Analytics", "Risk Metrics", "Attribution", "Excel", "Reconciliation"],
     link: "",
-    repo: ""
+    repo: "",
+    pdf: "assets/projects/CashCraft_Portfolio_Report_Dhruv_Kamdar.pdf"
   },
   {
     tag: "AI · Automation",
