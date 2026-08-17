@@ -22,14 +22,15 @@ const projects = [
     tag: "Investment Banking · Operations",
     title: "Goldman Sachs Operations",
     description:
-      "Operations Analyst job simulation focused on trade settlements, asset transfers and operational processes inside an investment bank. Analysed financial data to spot settlement issues and collaborated with Trading, Compliance and Technology teams to resolve them.",
+      "Two-part Operations Analyst simulation: built a personal transaction plan, then diagnosed a time-sensitive UHNW trade-fail — catching six blocked settlements and mis-signed Buy trades, and producing a full Trade Fail Report with cross-team escalation to Trading, Compliance and IT.",
     metrics: [
-      { value: "Trade settlements", label: "focus area" },
-      { value: "Ops risk", label: "principles applied" }
+      { value: "$9.6M", label: "mis-booking swing caught" },
+      { value: "6", label: "trade fails diagnosed" }
     ],
-    stack: ["Trade Settlements", "Operational Risk", "Compliance", "IB Operations"],
+    stack: ["Trade Settlements", "Reconciliation", "Operational Risk", "Compliance"],
     link: "",
-    repo: ""
+    repo: "",
+    pdf: "assets/projects/Goldman_Sachs_Operations_Dhruv_Kamdar_final.pdf"
   },
   {
     tag: "Data Governance",
