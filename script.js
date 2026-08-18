@@ -47,16 +47,17 @@ const projects = [
   },
   {
     tag: "Finance · Consulting",
-    title: "Practera Finance Research",
+    title: "Practera · aidKRIYA Funding Strategy",
     description:
-      "As Research Lead, served as the central point of contact for data requests, gathering, validating and reconciling across sources. Analysed $77B+ of financial data and presented findings to the client's Managing Director.",
+      "As Research Lead for Team FinEdge, built a weighted-scoring model to screen 22 funders for a health-tech social venture against five criteria, delivered a ranked top-10 shortlist, and recommended the client stop leading with a venture-capital pitch — presented to the client's Managing Director.",
     metrics: [
-      { value: "$77B+", label: "data reviewed" },
-      { value: "MD-level", label: "stakeholder" }
+      { value: "22", label: "funders scored" },
+      { value: "Top 10", label: "shortlist delivered" }
     ],
-    stack: ["Excel", "Reconciliation", "Reporting", "Stakeholder Mgmt"],
+    stack: ["Weighted Scoring", "Investor Research", "Reconciliation", "Excel", "Client Reporting"],
     link: "",
-    repo: ""
+    repo: "",
+    pdf: "assets/projects/Practera_aidKRIYA_Funding_Dhruv_Kamdar_v2.pdf"
   },
   {
     tag: "Portfolio · Finance",
