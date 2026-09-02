@@ -225,23 +225,22 @@ function initModal() {
   const modal = document.getElementById("contactModal");
   if (!modal) return;
   const toast = document.getElementById("modalToast");
-  const phone = "+44 7423 238207";
 
   // Call: dials on mobile; on desktop (no dialer) copies the number + confirms.
-  const callBtn = document.getElementById("callBtn");
-  if (callBtn) {
-    callBtn.addEventListener("click", () => {
-      // tel: still fires for devices that can call; give everyone the number too.
+  // Works for every .js-call button (India / UK) via its data-number.
+  modal.querySelectorAll(".js-call").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const num = btn.getAttribute("data-number");
       if (navigator.clipboard && navigator.clipboard.writeText) {
         navigator.clipboard
-          .writeText(phone)
-          .then(() => showToast(`Number copied to clipboard: ${phone}`))
-          .catch(() => showToast(`Call me at ${phone}`));
+          .writeText(num)
+          .then(() => showToast(`Number copied to clipboard: ${num}`))
+          .catch(() => showToast(`Call me at ${num}`));
       } else {
-        showToast(`Call me at ${phone}`);
+        showToast(`Call me at ${num}`);
       }
     });
-  }
+  });
   let toastTimer;
   function showToast(msg) {
     if (!toast) return;

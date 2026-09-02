@@ -23,7 +23,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=6" />
+  <link rel="stylesheet" href="styles.css?v=7" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230f766e'/%3E%3Ctext x='50' y='68' font-size='52' font-family='Arial' font-weight='bold' fill='white' text-anchor='middle'%3EDK%3C/text%3E%3C/svg%3E" />
 </head>
 <body>
@@ -57,7 +57,7 @@
     <div class="hero-bg"></div>
     <div class="container hero-inner">
       <div class="hero-text reveal">
-        <p class="eyebrow">London, UK · Available for opportunities</p>
+        <p class="eyebrow">Mumbai, India · Available for opportunities</p>
         <h1>Turning messy data into a <span class="grad">single source of truth.</span></h1>
         <p class="lead">
           I'm <strong>Dhruv Kamdar</strong>, an MSc Finance Analytics graduate from King's College London
@@ -70,7 +70,9 @@
         <div class="hero-socials">
           <a href="mailto:kamdardhruv8@gmail.com" aria-label="Email">✉ kamdardhruv8@gmail.com</a>
           <span>·</span>
-          <a href="tel:+447423238207" aria-label="Phone">+44 7423 238207</a>
+          <a href="tel:+919321669960" aria-label="India phone">India +91 93216 69960</a>
+          <span>·</span>
+          <a href="tel:+447423238207" aria-label="UK phone">UK +44 7423 238207</a>
         </div>
       </div>
       <div class="hero-card reveal">
@@ -262,7 +264,7 @@
           <div class="cc-ico">✉</div><h4>Email</h4><p>kamdardhruv8@gmail.com</p>
         </button>
         <button type="button" class="contact-card" data-modal="open">
-          <div class="cc-ico">📞</div><h4>Phone</h4><p>+44 7423 238207</p>
+          <div class="cc-ico">📞</div><h4>Phone</h4><p>India &amp; UK</p>
         </button>
         <a class="contact-card" href="assets/Dhruv_Kamdar_CV.pdf" download>
           <div class="cc-ico">📄</div><h4>Resume</h4><p>Download PDF</p>
@@ -281,13 +283,14 @@
       <p class="modal-sub">Pick the option that suits you best.</p>
       <div class="modal-actions">
         <a class="btn btn-primary btn-block" href="https://mail.google.com/mail/?view=cm&fs=1&to=kamdardhruv8@gmail.com&su=Portfolio%20enquiry" target="_blank" rel="noopener">✉ Send email</a>
-        <a class="btn btn-outline btn-block" id="callBtn" href="tel:+447423238207">📞 Call</a>
+        <a class="btn btn-outline btn-block js-call" data-number="+91 93216 69960" href="tel:+919321669960">📞 Call India (+91)</a>
+        <a class="btn btn-outline btn-block js-call" data-number="+44 7423 238207" href="tel:+447423238207">📞 Call UK (+44)</a>
         <a class="btn btn-outline btn-block" href="https://wa.me/447423238207" target="_blank" rel="noopener">💬 Message on WhatsApp</a>
       </div>
       <p class="modal-toast" id="modalToast" hidden></p>
       <div class="modal-details">
         <span>kamdardhruv8@gmail.com</span>
-        <span>+44 7423 238207</span>
+        <span>India +91 93216 69960 · UK +44 7423 238207</span>
       </div>
     </div>
   </div>
@@ -313,11 +316,11 @@
   <footer class="footer">
     <div class="container footer-inner">
       <span class="brand">DK<span>.</span></span>
-      <p>© <span id="year"></span> Dhruv Kamdar · Built with care in London.</p>
+      <p>© <span id="year"></span> Dhruv Kamdar · Built with care in Mumbai.</p>
       <a href="#home" class="to-top">Back to top ↑</a>
     </div>
   </footer>
 
-  <script src="script.js?v=6"></script>
+  <script src="script.js?v=7"></script>
 </body>
 </html>
