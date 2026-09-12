@@ -23,7 +23,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=8" />
+  <link rel="stylesheet" href="styles.css?v=9" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230f766e'/%3E%3Ctext x='50' y='68' font-size='52' font-family='Arial' font-weight='bold' fill='white' text-anchor='middle'%3EDK%3C/text%3E%3C/svg%3E" />
 </head>
 <body>
@@ -42,7 +42,7 @@
         <a href="#contact">Contact</a>
       </nav>
       <div class="nav-actions">
-        <a href="assets/Dhruv_Kamdar_CV.pdf" class="btn btn-ghost" download>Resume</a>
+        <button type="button" class="btn btn-ghost" data-resume="open">Resume</button>
         <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
           <svg class="sun" viewBox="0 0 24 24" width="18" height="18"><circle cx="12" cy="12" r="5" fill="currentColor"/><g stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.2" y1="4.2" x2="5.6" y2="5.6"/><line x1="18.4" y1="18.4" x2="19.8" y2="19.8"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.2" y1="19.8" x2="5.6" y2="18.4"/><line x1="18.4" y1="5.6" x2="19.8" y2="4.2"/></g></svg>
           <svg class="moon" viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
@@ -57,7 +57,7 @@
     <div class="hero-bg"></div>
     <div class="container hero-inner">
       <div class="hero-text reveal">
-        <p class="eyebrow">Mumbai, India · Available for opportunities</p>
+        <p class="eyebrow">India &amp; UK · Available for opportunities</p>
         <h1>Turning messy data into a <span class="grad">single source of truth.</span></h1>
         <p class="lead">
           I'm <strong>Dhruv Kamdar</strong>, an MSc Finance Analytics graduate from King's College London
@@ -65,7 +65,7 @@
         </p>
         <div class="hero-cta">
           <a href="#projects" class="btn btn-primary">View my work</a>
-          <a href="assets/Dhruv_Kamdar_CV.pdf" class="btn btn-outline" download>Download resume</a>
+          <button type="button" class="btn btn-outline" data-resume="open">Download resume</button>
         </div>
         <div class="hero-socials">
           <a href="mailto:kamdardhruv8@gmail.com" aria-label="Email">✉ kamdardhruv8@gmail.com</a>
@@ -257,7 +257,7 @@
       <div class="section-head reveal center">
         <span class="tag">05 - Contact</span>
         <h2>Let's build something clean.</h2>
-        <p class="section-sub">Open to Data Analyst, Data Quality and Analytics roles. The fastest way to reach me is email.</p>
+        <p class="section-sub">Open to Data &amp; Business Analyst roles in India and the UK. The fastest way to reach me is email.</p>
       </div>
       <div class="contact-grid reveal">
         <button type="button" class="contact-card" data-modal="open">
@@ -266,9 +266,9 @@
         <button type="button" class="contact-card" data-modal="open">
           <div class="cc-ico">📞</div><h4>Phone</h4><p>India &amp; UK</p>
         </button>
-        <a class="contact-card" href="assets/Dhruv_Kamdar_CV.pdf" download>
-          <div class="cc-ico">📄</div><h4>Resume</h4><p>Download PDF</p>
-        </a>
+        <button type="button" class="contact-card" data-resume="open">
+          <div class="cc-ico">📄</div><h4>Resume</h4><p>UK &amp; India</p>
+        </button>
       </div>
     </div>
   </section>
@@ -295,6 +295,24 @@
     </div>
   </div>
 
+  <!-- Resume region chooser popup -->
+  <div class="modal" id="resumeModal" aria-hidden="true">
+    <div class="modal-backdrop" data-resume="close"></div>
+    <div class="modal-card" role="dialog" aria-modal="true" aria-label="Download resume">
+      <button class="modal-close" data-resume="close" aria-label="Close">&times;</button>
+      <div class="avatar modal-avatar">DK</div>
+      <h3>Download my CV</h3>
+      <p class="modal-sub">Same experience &amp; projects — pick the version for your region.</p>
+      <div class="modal-actions">
+        <a class="btn btn-primary btn-block" href="assets/Dhruv_Kamdar_CV_India.pdf" download>India CV · +91, Mumbai</a>
+        <a class="btn btn-outline btn-block" href="assets/Dhruv_Kamdar_CV_UK.pdf" download>UK CV · +44, London, Graduate Visa</a>
+      </div>
+      <div class="modal-details">
+        <span>King's College London · SQL · Python · R · Advanced Excel</span>
+      </div>
+    </div>
+  </div>
+
   <!-- Project case-study popup -->
   <div class="pdf-modal" id="pdfModal" aria-hidden="true">
     <div class="modal-backdrop" data-pdf-close></div>
@@ -316,11 +334,11 @@
   <footer class="footer">
     <div class="container footer-inner">
       <span class="brand">DK<span>.</span></span>
-      <p>© <span id="year"></span> Dhruv Kamdar · Built with care in Mumbai.</p>
+      <p>© <span id="year"></span> Dhruv Kamdar · Built with care.</p>
       <a href="#home" class="to-top">Back to top ↑</a>
     </div>
   </footer>
 
-  <script src="script.js?v=8"></script>
+  <script src="script.js?v=9"></script>
 </body>
 </html>

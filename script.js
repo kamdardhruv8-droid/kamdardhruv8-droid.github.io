@@ -324,6 +324,35 @@ function initProjectModal() {
   });
 }
 
+/* ---- Resume region chooser (UK / India) ---- */
+function initResumeModal() {
+  const modal = document.getElementById("resumeModal");
+  if (!modal) return;
+  const open = () => {
+    modal.classList.add("open");
+    modal.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+  };
+  const close = () => {
+    modal.classList.remove("open");
+    modal.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+  };
+  document.querySelectorAll('[data-resume="open"]').forEach((el) =>
+    el.addEventListener("click", open)
+  );
+  modal.querySelectorAll('[data-resume="close"]').forEach((el) =>
+    el.addEventListener("click", close)
+  );
+  // Close after a version is chosen so the download feels resolved.
+  modal.querySelectorAll(".modal-actions a").forEach((el) =>
+    el.addEventListener("click", () => setTimeout(close, 150))
+  );
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && modal.classList.contains("open")) close();
+  });
+}
+
 /* ---- Init ---- */
 document.addEventListener("DOMContentLoaded", () => {
   renderProjects();
@@ -331,6 +360,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initScroll();
   initMenu();
   initModal();
+  initResumeModal();
   initProjectModal();
   document.getElementById("year").textContent = new Date().getFullYear();
 });
