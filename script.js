@@ -19,6 +19,20 @@ const projects = [
     pdf: "assets/projects/Quantium_Project_Dhruv_Kamdar.pdf"
   },
   {
+    tag: "Credit Analysis · Banking",
+    title: "Standard Chartered Credit Analyst",
+    description:
+      "Two-part Credit Analyst simulation assessing the creditworthiness of Green Solutions Manufacturing Ltd across two years of financials — ratio analysis, a data-quality catch on the capex figures, and a covenant-based recommendation — framed by reusable-products industry research.",
+    metrics: [
+      { value: "7.8x → 1.2x", label: "leverage cut" },
+      { value: "2.1x → 17.5x", label: "interest cover" }
+    ],
+    stack: ["Ratio Analysis", "Credit Risk", "Financial Modelling", "Industry Research", "Excel"],
+    link: "",
+    repo: "",
+    pdf: "assets/projects/Standard_Chartered_Credit_Analyst_Dhruv_Kamdar.pdf"
+  },
+  {
     tag: "Investment Banking · Operations",
     title: "Goldman Sachs Operations",
     description:
